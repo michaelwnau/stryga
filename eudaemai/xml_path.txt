@@ -1,0 +1,36 @@
+# XPath Expressions for the different elements
+
+
+
+<article class ="main-article">
+    <h1> Titanic(1997) </h1>
+    <p class ="plot" > 84 years later... </p>
+    <p class ="plot2" > In the end ... </p>
+    <div class ="full-script">
+    "13 meters. You should see it. "
+    "Okay, take her up and over the bow rail. "
+    </div>
+</article>
+
+
+
+
+
+#  // - Selects all nodes in the document from the current node that match the selection no matter where they are
+# / - Selects all nodes in the document from the current node that match the selection only if they are children of the current node
+# . - Selects the current node
+# .. - Selects the parent of the current node
+# @ - Selects attributes
+# * - Wildcard. Selects all elements and attributes
+# //div - Selects all div elements in the document
+# //div[@class] - Selects all div elements that have a class attribute
+# //div[@class="full-script"] - Selects all div elements that have a class attribute with the value full-script
+# //div[@class="full-script"]/p - Selects all p elements that are children of div elements that have a class attribute with the value full-script
+# //div[@class="full-script"]/p[1] - Selects the first p element that is a child of a div element that has a class attribute with the value full-script
+# //div[@class="full-script"]/p[last()] - Selects the last p element that is a child of a div element that has a class attribute with the value full-script
+# //div[@class="full-script"]/p[last()-1] - Selects the second to last p element that is a child of a div element that has a class attribute with the value full-script
+# //div[@class="full-script"]/p[position()<3] - Selects all p elements that are children of a div element that has a class attribute with the value full-script and are the first or second child of their parent
+# //div[@class="full-script"]/p[2] - Selects the second p element that is a child of a div element that has a class attribute with the value full-script
+# //div[@class="full-script"]/p[2]/text() - Selects the text of the second p element that is a child of a div element that has a class attribute with the value full-script
+
+# Use the inspect tools in Chrome to find the XPath expression for the different elements that you want to scrape
